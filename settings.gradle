@@ -1,0 +1,4 @@
+rootProject.name = 'vue-master'
+include 'base-server'
+include 'base-web'
+
