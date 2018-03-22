@@ -1,8 +1,10 @@
 <template>
   <div id="index">
-    <va-nav></va-nav>
-    <va-menu></va-menu>
-    <va-contant></va-contant>
+    <div class="wrapper">
+      <va-nav></va-nav>
+      <va-menu></va-menu>
+      <va-contant></va-contant>
+    </div>
   </div>
 </template>
 
@@ -13,6 +15,8 @@ import Contant from '@/components/contant'
 
   export default {
     name: 'index',
+    created () {
+    },
     components: {
       'va-nav': Nav,
       'va-menu': Menu,
@@ -22,23 +26,6 @@ import Contant from '@/components/contant'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  .index{
-    text-align: center;
-    margin-top: 300px;
-  }
+<style>
+
 </style>

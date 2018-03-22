@@ -1,40 +1,45 @@
 <template>
-  <div class="contant">
-    <router-view></router-view>
+  <!-- Content Wrapper. Contains page content -->
+  <div id="content-wrap" class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Version 2.0</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <section class="content">
+      <transition name="page" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </section>
+    <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
 </template>
 
 <script>
   export default {
     name: 'va-contant',
-    data () {
-    return {
-      msg: 'Welcome to Contant'
+    created () {
+
     }
-  }
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  h1, h2 {
-    font-weight: normal;
+<style>
+  .page-enter-active, .page-leave-active {
+    transition: opacity 0.5s, transform 0.5s;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
+  .page-enter, .page-leave-to {
+    opacity: 0;
   }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  .contant{
-    border: 1px solid red;
-    float: left;
-    width: 68%;
-    height: 500px;
+  .content-header{
+    border-bottom: 1px solid #d2d6de;
   }
 </style>

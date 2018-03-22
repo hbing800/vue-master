@@ -14,7 +14,7 @@
 
 <style>
   #app {
-  // 过渡动画
+   /*过渡动画*/
      .fade-enter-active,
      .fade-leave-active {
        transition: opacity 0.3s;
@@ -24,7 +24,7 @@
     opacity: 0;
   }
   }
-  // 自定义滚动条样式
+  /* 自定义滚动条样式*/
      ::-webkit-scrollbar-track-piece {
        width: 8px;
        background-color: #f8f8f8;
